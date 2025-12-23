@@ -9,7 +9,7 @@ export const AdminLecturesPage = () => {
 
   // Загружаем данные при открытии страницы
   useEffect(() => {
-    axios.get('http://localhost:5000/api/data')
+    axios.get('https://pm-online-school.onrender.com/api/data')
       .then(res => setLectures(res.data.lectures || []))
       .catch(err => console.error(err));
   }, []);
