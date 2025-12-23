@@ -1,7 +1,7 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'; // Убрал Navigate из импорта тут, так как он внутри
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
-import { ProtectedRoute } from './components/ProtectedRoute'; // ИМПОРТ ЗАЩИТЫ
+import { ProtectedRoute } from './components/ProtectedRoute';
 
 import { LoginPage } from './pages/LoginPage';
 import { AdminLayout } from './layouts/AdminLayout';
@@ -24,7 +24,6 @@ export default function App() {
           {/* --- ЗАЩИЩЕННАЯ ЗОНА АДМИНА --- */}
           <Route element={<ProtectedRoute allowedRole="admin" />}>
             <Route path="/admin" element={<AdminLayout />}>
-              {/* index route для редиректа внутри админки можно сделать так, или в ProtectedRoute */}
               <Route index element={<AdminLecturesPage />} /> 
               
               <Route path="lectures" element={<AdminLecturesPage />} />
