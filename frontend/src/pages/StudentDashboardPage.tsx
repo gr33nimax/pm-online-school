@@ -19,7 +19,7 @@ export const StudentDashboardPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/data');
+        const res = await axios.get('http://https://pm-online-school.onrender.com/api/data');
         setLectures(res.data.lectures || []);
         setTests(res.data.tests || []);
         
