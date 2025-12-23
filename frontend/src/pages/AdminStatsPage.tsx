@@ -11,7 +11,7 @@ export const AdminStatsPage = () => {
   }, []);
 
   const fetchData = () => {
-    axios.get('http://localhost:5000/api/data')
+    axios.get('http://https://pm-online-school.onrender.com/api/data')
       .then(res => {
         // Сортируем: новые сверху
         const sorted = (res.data.results || []).sort((a: any, b: any) => 
