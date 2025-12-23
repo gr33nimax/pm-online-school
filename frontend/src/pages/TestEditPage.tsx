@@ -20,7 +20,7 @@ export const TestEditPage = () => {
 
   useEffect(() => {
     if (id) {
-      axios.get('http://localhost:5000/api/data')
+      axios.get('http://https://pm-online-school.onrender.com/api/data')
         .then(res => {
           const found = res.data.tests.find((t: Test) => t.id === id);
           if (found) setTest(found);
