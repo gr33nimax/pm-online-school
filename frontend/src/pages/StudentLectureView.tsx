@@ -12,7 +12,7 @@ export const StudentLectureView = () => {
   const [lecture, setLecture] = useState<Lecture | null>(null);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/data')
+    axios.get('http://https://pm-online-school.onrender.com/api/data')
       .then(res => {
         const found = res.data.lectures.find((l: Lecture) => l.id === id);
         setLecture(found || null);
