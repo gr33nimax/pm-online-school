@@ -8,7 +8,7 @@ export const AdminTestsPage = () => {
   const [tests, setTests] = useState<Test[]>([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/data')
+    axios.get('http://https://pm-online-school.onrender.com/api/data')
       .then(res => setTests(res.data.tests || []));
   }, []);
 
