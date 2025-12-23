@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #f8fafc;
+}
+/* Стили для вложенных списков (Level 1, 2, 3) */
+.ql-editor ul {
+  list-style-type: disc; /* Уровень 1: Точка */
+  padding-left: 1.5em;
+}
+
+.ql-editor ul li ul {
+  list-style-type: circle; /* Уровень 2: Пустой круг */
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+}
+
+.ql-editor ul li ul li ul {
+  list-style-type: square; /* Уровень 3: Квадрат */
+}
+
+/* Отступы между пунктами списка для читабельности */
+.ql-editor li {
+  margin-bottom: 0.5em;
+}
